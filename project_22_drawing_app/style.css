@@ -1,0 +1,72 @@
+ *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.canva {
+  width: 80rem;
+  height: 90vh;
+  border: 2px solid steelblue;
+}
+
+.tool_box {
+  height: calc(100vh - 90vh);
+  background-color: steelblue;
+  border: .1 solid slateblue;
+  display: flex;
+  width: 80rem;
+  margin: .25rem;
+  padding: 1rem;
+   z-index: 100; 
+ }
+
+.btn {
+  background-color: #fff;
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0.25rem;
+  padding: 0.5rem;
+}
+#clear{
+  margin-left: auto;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media(max-width: 900px){
+  .canva{
+width: 90vw;
+  }
+  .tool_box{
+    width: 90vw;
+  }
+} 
+
+
+
+
+

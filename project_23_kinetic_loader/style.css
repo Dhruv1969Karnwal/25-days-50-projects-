@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: steelblue;
+}
+.kinetic_content{
+position: relative;
+width: 10rem;
+height: 10rem;
+}
+
+
+/* FIRST WAY OF DOINF THIS*/
+
+
+/* .kinetic_content::after,.kinetic_content::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 5rem solid transparent;
+  border-bottom-color: #fff;
+  animation: animate_after 2s linear infinite .5s;
+}
+.kinetic_content::before{
+  transform: rotate(90deg);
+  animation: animate_before 2s linear infinite;
+}
+@keyframes animate_after {
+  0%,25%{
+    transform: rotate(0deg);
+  }
+  50%,75%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate_before {
+  0%,25%{
+    transform: rotate(90deg);
+  }
+  50%,75%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(450deg);
+  }
+} */
+
+
+
+
+/*SECOND WAY OF DOING THIS*/
+
+.kinetic_content::after,.kinetic_content::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 5rem solid transparent;
+}
+.kinetic_content::before{
+  border-left-color: #fff;
+  animation: animate 2s linear infinite ;
+}
+.kinetic_content::after{
+  border-bottom-color: #fff;
+  animation: animate 2s linear infinite .5s;                          /* there is a delay of .5s */
+}
+@keyframes animate {
+  0%,25%{
+    transform: rotate(0deg);
+  }
+  50%,75%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  /* background-color: red; */
+}
+
+.heading {
+  /* display: none; */
+  border: 1px solid #999;
+  background-color: #eee;
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
+  font-size: 20px;
+  font-weight: bold;
+  /* border: .1rem solid black; */
+  text-align: center;
+  padding: 2rem;
+}
+/* .content_main_div {
+  margin-top: 2rem;
+} */
+.content_div {
+
+  max-width: 60rem;
+  display: flex;
+  /* margin: 2rem; */
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.content_1_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  border: 1px solid #999;
+    background-color: #eee;
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
+    font-size: 2rem;
+    font-weight: bold;
+  width: 15rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  /* min-width: 15rem;
+  min-height: 5rem; */
+  position: relative;
+  /* background-color: green; */
+
+}
+.content::before{
+  position: absolute;
+
+  top: -2.4rem;
+    left: 0rem;
+    text-align: center;
+    width: 100%;
+    color: #555;
+    font-size: 14px;
+}
+#content_1::before{
+  content: 'event.Key';
+}
+#content_2::before{
+  content: 'event.KeyCode';
+}
+#content_3:before{
+  content: 'event.Code';
+}
+/* .content small {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #555;
+  font-size: 14px;
+} */
+
+@media(max-width:600px) {
+  .content_div {
+    display: block;
+  }
+  div#content_3 {
+    margin-left: 10rem;
+}
+}

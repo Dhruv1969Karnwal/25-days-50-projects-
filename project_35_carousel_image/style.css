@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 50rem;
+  height: 53rem;
+  overflow: hidden;
+}
+
+ .image_div {
+  width: 50rem;
+  height: 50rem;
+} 
+
+.image {
+  width: 100%;
+  opacity: 1;
+  height: 100%;
+  object-fit: cover;
+
+} 
+/* img{
+  width: 50rem;
+  height: 50rem;
+  object-fit: cover;
+} */
+
+.image_div {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+  /* overflow: hidden; */
+}
+
+.btn {
+  background: red;
+  /* width: 24.876rem; */
+  height: 100%;
+  width: 49.75%;
+  background-color: rebeccapurple;
+  cursor: pointer;
+  color: #fff;
+  border: 0rem;
+}
+
+.btn_div {
+  height: 3rem;
+}

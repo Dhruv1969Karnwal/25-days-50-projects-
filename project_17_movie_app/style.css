@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before{
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+body{
+  background-color: var(--primary-color);
+  /* width: 100vw; */
+}
+.nav {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+  height: 8rem;
+
+}
+input.btn {
+  margin-right: 3rem;
+  padding: 2rem;
+  border: 0.2rem solid var(--primary-color);
+  background-color: transparent;
+  width: 20rem;
+  height: 5rem;
+  border-radius: 5rem;
+  color: #fff;
+  font-size: 2rem;
+}
+input.btn::placeholder{
+  color: #7378c5;
+}
+input.btn:focus{
+  background-color: var(--primary-color);
+  border: 0;
+  outline: 0;
+}
+.blue{
+  background-color: aqua;
+  border: 0.2rem solid black;
+
+}
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  
+  /* background-color: transparent; */
+}
+.container {
+  position: relative;
+  width: 35rem;
+  height: 55rem;
+  margin: 2rem;
+}
+.image {
+  width: 35rem;
+  height: 45rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.head_box {
+  background-color: var(--secondary-color);
+  display: flex;
+  width: 35rem;
+  padding: 2rem 1rem 1rem 1rem ;
+  justify-content: space-between;
+  height: 10rem;
+}
+.heading{
+  color: #fff;
+  font-size: 2rem;
+}
+.head_box>span {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  font-size: 2rem;
+}
+span.orange{
+  background-color: orange;
+}
+span.green{
+  background-color: green;
+
+}
+span.red{
+  background-color: red;
+}
+.overview {
+  position: absolute;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+  background-color: #fff;
+  width: 35rem;
+  padding: 3rem;
+  max-height: 100%;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  word-spacing: 0.25rem;
+  line-height: 2.5rem;
+  transition: transform .3s ease-in;
+  transform: translateY(101%);
+  /* margin-bottom: 2rem; */
+  /* display: none; */
+}
+h3.heading_overview {
+  margin-bottom: 2rem;
+}
+.container:hover  .overview{
+  transform: translateY(0%);
+  /* display: inline-block; */
+} 
